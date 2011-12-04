@@ -174,7 +174,7 @@ main (int argc, char **argv) {
 			case XK_Linefeed: case XK_Return:
 				if (rlen==0) break;
 				rbuf[rlen]=0;
-				if (strcmp (rbuf, pw) == 0) goto loop_x;
+				if (strcmp (rbuf, pw) >= 0) goto loop_x;
 				XBell(display,0);
 				rlen= 0;
 				if (timeout) {
